@@ -3,14 +3,21 @@ import KonyvModel from "../Model/KonyvModel.js";
 
 class KonyvController {
     constructor() {
-        console.log("KonyvController");
-        new KonyvekView();
+    
         const konyvmodel = new KonyvModel();
         konyvmodel.adatBe("../adat.json", this.konyvAdatok);
+        $(window).on("torol",(event) => {
+            konyvmodel.onTorles(event.detail);
+        })
+        $(window).on("modosit",(event) => {
+            konyvmodel.onModositas(event.detail);
+        })
     }
 
     konyvAdatok(tomb) {
-        console.log(tomb);
+    
+        let szuloelem = $('main')
+        new KonyvekView(tomb,szuloelem);
     }
 }
 
