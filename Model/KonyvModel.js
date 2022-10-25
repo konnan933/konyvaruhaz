@@ -26,9 +26,6 @@ class KonyvModel {
   onModositas(data) {
     console.log(data);
   }
-  onKosarba(data) {
-    console.log(data);
-  }
 }
 
 export default KonyvModel;

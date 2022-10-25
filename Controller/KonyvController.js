@@ -1,5 +1,5 @@
-import KonyvekView from "../View/KonyvekView.js";
-import PublicKonyvek from "../View/konyvekPublicView.js";
+import KonyvekView from "../View/public/konyvPublicView.js";
+import PublicKonyvek from "../View/public/konyvekPublicView.js";
 import KonyvModel from "../Model/KonyvModel.js";
 
 class KonyvController {
@@ -11,9 +11,6 @@ class KonyvController {
     });
     $(window).on("modosit", (event) => {
       konyvmodel.onModositas(event.detail);
-    });
-    $(window).on("kosarba", (event) => {
-      konyvmodel.onKosarba(event.detail);
     });
   }
 

@@ -20,7 +20,7 @@ class publicKonyv {
     });
   }
   kattintasTrigger(esemenyNev) {
-    const esemeny = new CustomEvent(esemenyNev, { detail: this.data.id });
+    const esemeny = new CustomEvent(esemenyNev, { detail: this.data });
     window.dispatchEvent(esemeny);
   }
 }
